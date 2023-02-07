@@ -40,7 +40,6 @@ export const TODO_ACTIONS = (state = initialState, action) => {
       };
     case "DELETE_TODO":
       const result = state.tasks.filter((task) => task.id !== taskId);
-      console.log(39, result);
       return {
         tasks: [...result],
       };
@@ -56,15 +55,15 @@ export const TODO_ACTIONS = (state = initialState, action) => {
       return {
         tasks: [...state.tasks],
       };
-    case "MOVE_TOP":
+    case "MOVE_TOP": {
       let newIndex = state.tasks.findIndex((obj) => obj.id === taskId);
       const task = state.tasks[newIndex];
       state.tasks.splice(newIndex, 1);
       state.tasks.unshift(task);
-      console.log(state);
       return {
         tasks: [...state.tasks],
       };
+    }
     default:
       return {
         tasks: [...state.tasks],
