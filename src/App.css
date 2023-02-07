@@ -1,38 +1,108 @@
 .App {
   text-align: center;
+  height: 70%;
+  width: 70%;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  background-color: #F7F8FC;
+  border-radius: 7px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  height: 100vh;
+  width: 100vw;
+  padding: 30px;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red
+}
+
+.debug {
+  border: 1px solid red
+}
+
+.strikethrough{
+  text-decoration: line-through;
+}
+
+form input {
+  width: 88%;
+  height: 30px;
+  margin-right: 1%;
+}
+
+form input:focus {
+  border: 1px solid #2a7bd3;
+}
+
+.btn-form {
+  border: none;
+  border-radius: 3px;
+  background-color: #2a7bd3;
   color: white;
+  font-family: lato;
+  font-size: 14px;
+  width: 10%;
+  padding: 9px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-action button {
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-edit {
+  border: 1px solid gray;
+  border-radius: 3px;
+  color: gray;
+  background-color: transparent;
+  padding: 3px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  border: 1px solid red;
+  border-radius: 3px;
+  color: red;
+  background-color: transparent;
+  padding: 3px;
+  width: 60px;
+}
+
+.todoContainer {
+  padding: 0 10%;
+}
+
+.todoContainer form{
+  color: red
+}
+
+.todo{
+  margin-left: 10px;
+}
+
+.todo-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 5px 0;
+  border-bottom: 1px dotted gray;
+}
+
+.todo-text{
+  display: flex;
+  align-items: center;
+} 
+
+.todoList form {
+  margin-top: 10px;
 }
