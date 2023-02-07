@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToDo, editToDo } from "../redux/action";
+import PropTypes from "prop-types";
 
-const TodoForm = ({ todoTask, todoId, test, handleIsEdit }) => {
-  console.log(6, test);
+const TodoForm = ({ todoTask, todoId, handleIsEdit }) => {
   const [task, setTask] = useState(todoTask || "");
   const dispatch = useDispatch();
 
@@ -37,6 +37,11 @@ const TodoForm = ({ todoTask, todoId, test, handleIsEdit }) => {
       </button>
     </form>
   );
+};
+
+TodoForm.propTypes = {
+  todoTask: PropTypes.string,
+  todoId: PropTypes.number,
 };
 
 export default TodoForm;

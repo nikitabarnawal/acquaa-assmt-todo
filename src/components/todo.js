@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { completeToDo, deleteToDo, moveToTop } from "../redux/action";
+import PropTypes from "prop-types";
 import TodoForm from "./todoForm";
 
 const Todo = ({ todo, index }) => {
-  console.log(7, todo);
   const [isEdit, setIsEdit] = useState(false);
   const dispatch = useDispatch();
 
@@ -62,6 +62,10 @@ const Todo = ({ todo, index }) => {
       )}
     </>
   );
+};
+
+Todo.propTypes = {
+  todo: PropTypes.object,
 };
 
 export default Todo;
